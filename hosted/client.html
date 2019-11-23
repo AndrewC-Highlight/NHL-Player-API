@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our simple HTTP server</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  
+  <script src = "bundle.js"></script>
+  
+</head>
+<body>
+  <section id="top">
+    <h3>NHL Trending Rosters </h3>
+    <form id = "teamSelections" action = "/getTeam" method = "get">
+      <label for="teams"><b>View Team:</b></label>
+      <select id ="teamSelect">
+        <option value="tampa">Tampa Bay</option>
+        <option value="bruins">Boston Bruins</option>
+        <option value="flames">Calgary Flames</option>
+      </select>
+      <input type ="submit" value ="Send"/>
+    </form>
+    <form id = "playerForm" action = "addPlayer" method = "post">
+      <label for="add"><b>Add Player:</b>  </label>
+      <label for="name">Name: </label>
+      <input id="nameField" type="text" name="name" />
+      <label for="position">Position: </label>
+      <input id="positionField" type="text" name="position">
+      <label for="team">Team: </label>
+      <select id = "teamField">
+        <option value="tampa">Tampa</option>
+        <option value="bruins">Bruins</option>
+        <option value="flames">Flames</option>
+      </select>
+      <label for="goals">Goals: </label>
+      <input id="goalsField" type="number" name="goals" min="0" max="200" step="1"/>
+      <label for="assists">Assists: </label>
+      <input id="assistsField" type="number" name="assists" min="0" max="200" step="1"/>
+      <label for="img">Image Link: </label>
+      <input id="imgField" type="text" name="img">
+      <input type="submit" value="Add Player"/>
+    </form>
+  </section>
+  <div id="content">
+  </div>
+</body>
+</html>
